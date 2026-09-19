@@ -1,0 +1,170 @@
+[
+  {
+    "id": "sanjose",
+    "slug": "san-jose",
+    "name": "Tandoori Pizza - San Jose",
+    "address": "123 Sample St",
+    "city": "San Jose",
+    "state": "CA",
+    "zip": "95112",
+    "phone": "(408) 555-0101",
+    "hours": {
+      "monday": "11:00 AM - 10:00 PM",
+      "tuesday": "11:00 AM - 10:00 PM",
+      "wednesday": "11:00 AM - 10:00 PM",
+      "thursday": "11:00 AM - 10:00 PM",
+      "friday": "11:00 AM - 11:00 PM",
+      "saturday": "11:00 AM - 11:00 PM",
+      "sunday": "11:00 AM - 10:00 PM"
+    },
+    "orderUrl": "https://order.tandooripizza.com",
+    "status": "open"
+  },
+  {
+    "id": "cupertino",
+    "slug": "cupertino",
+    "name": "Tandoori Pizza - Cupertino",
+    "address": "456 Mock Blvd",
+    "city": "Cupertino",
+    "state": "CA",
+    "zip": "95014",
+    "phone": "(408) 555-0102",
+    "hours": {
+      "monday": "11:00 AM - 10:00 PM",
+      "tuesday": "11:00 AM - 10:00 PM",
+      "wednesday": "11:00 AM - 10:00 PM",
+      "thursday": "11:00 AM - 10:00 PM",
+      "friday": "11:00 AM - 11:00 PM",
+      "saturday": "11:00 AM - 11:00 PM",
+      "sunday": "11:00 AM - 10:00 PM"
+    },
+    "orderUrl": "https://order.tandooripizza.com",
+    "status": "open"
+  },
+  {
+    "id": "campbell",
+    "slug": "campbell",
+    "name": "Tandoori Pizza - Campbell",
+    "address": "789 Fake Ave",
+    "city": "Campbell",
+    "state": "CA",
+    "zip": "95008",
+    "phone": "(408) 555-0103",
+    "hours": {
+      "monday": "11:00 AM - 10:00 PM",
+      "tuesday": "11:00 AM - 10:00 PM",
+      "wednesday": "11:00 AM - 10:00 PM",
+      "thursday": "11:00 AM - 10:00 PM",
+      "friday": "11:00 AM - 11:00 PM",
+      "saturday": "11:00 AM - 11:00 PM",
+      "sunday": "11:00 AM - 10:00 PM"
+    },
+    "orderUrl": "https://order.tandooripizza.com",
+    "status": "open"
+  },
+  {
+    "id": "santaclara",
+    "slug": "santa-clara",
+    "name": "Tandoori Pizza - Santa Clara",
+    "address": "101 Placeholder Way",
+    "city": "Santa Clara",
+    "state": "CA",
+    "zip": "95050",
+    "phone": "(408) 555-0104",
+    "hours": {
+      "monday": "11:00 AM - 10:00 PM",
+      "tuesday": "11:00 AM - 10:00 PM",
+      "wednesday": "11:00 AM - 10:00 PM",
+      "thursday": "11:00 AM - 10:00 PM",
+      "friday": "11:00 AM - 11:00 PM",
+      "saturday": "11:00 AM - 11:00 PM",
+      "sunday": "11:00 AM - 10:00 PM"
+    },
+    "orderUrl": "https://order.tandooripizza.com",
+    "status": "open"
+  },
+  {
+    "id": "sunnyvale",
+    "slug": "sunnyvale",
+    "name": "Tandoori Pizza - Sunnyvale",
+    "address": "202 Demo Dr",
+    "city": "Sunnyvale",
+    "state": "CA",
+    "zip": "94086",
+    "phone": "(408) 555-0105",
+    "hours": {
+      "monday": "11:00 AM - 10:00 PM",
+      "tuesday": "11:00 AM - 10:00 PM",
+      "wednesday": "11:00 AM - 10:00 PM",
+      "thursday": "11:00 AM - 10:00 PM",
+      "friday": "11:00 AM - 11:00 PM",
+      "saturday": "11:00 AM - 11:00 PM",
+      "sunday": "11:00 AM - 10:00 PM"
+    },
+    "orderUrl": "https://order.tandooripizza.com",
+    "status": "coming-soon"
+  },
+  {
+    "id": "mountainview",
+    "slug": "mountain-view",
+    "name": "Tandoori Pizza - Mountain View",
+    "address": "303 Test St",
+    "city": "Mountain View",
+    "state": "CA",
+    "zip": "94041",
+    "phone": "(650) 555-0106",
+    "hours": {
+      "monday": "11:00 AM - 10:00 PM",
+      "tuesday": "11:00 AM - 10:00 PM",
+      "wednesday": "11:00 AM - 10:00 PM",
+      "thursday": "11:00 AM - 10:00 PM",
+      "friday": "11:00 AM - 11:00 PM",
+      "saturday": "11:00 AM - 11:00 PM",
+      "sunday": "11:00 AM - 10:00 PM"
+    },
+    "orderUrl": "https://order.tandooripizza.com",
+    "status": "open"
+  },
+  {
+    "id": "east-windsor",
+    "slug": "east-windsor",
+    "name": "Tandoori Pizza - East Windsor",
+    "address": "332 S Main St",
+    "city": "East Windsor",
+    "state": "CT",
+    "zip": "06088",
+    "phone": "(860) 254-5264",
+    "hours": {
+      "monday": "11:00 AM - 10:00 PM",
+      "tuesday": "11:00 AM - 10:00 PM",
+      "wednesday": "11:00 AM - 10:00 PM",
+      "thursday": "11:00 AM - 10:00 PM",
+      "friday": "11:00 AM - 11:00 PM",
+      "saturday": "11:00 AM - 11:00 PM",
+      "sunday": "11:00 AM - 10:00 PM"
+    },
+    "orderUrl": "https://order.tandooripizza.com",
+    "status": "open"
+  },
+  {
+    "id": "stockton",
+    "slug": "stockton",
+    "name": "Tandoori Pizza - Stockton",
+    "address": "1122 N El Dorado St",
+    "city": "Stockton",
+    "state": "CA",
+    "zip": "95202",
+    "phone": "(209) 555-0108",
+    "hours": {
+      "monday": "11:00 AM - 10:00 PM",
+      "tuesday": "11:00 AM - 10:00 PM",
+      "wednesday": "11:00 AM - 10:00 PM",
+      "thursday": "11:00 AM - 10:00 PM",
+      "friday": "11:00 AM - 11:00 PM",
+      "saturday": "11:00 AM - 11:00 PM",
+      "sunday": "11:00 AM - 10:00 PM"
+    },
+    "orderUrl": "https://order.tandooripizza.com",
+    "status": "open"
+  }
+]
