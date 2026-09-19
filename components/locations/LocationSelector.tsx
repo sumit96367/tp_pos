@@ -1,0 +1,5 @@
+"use client";
+import { AnimatePresence, motion } from "framer-motion";
+import type { PizzaLocation } from "@/types/location";
+import { LocationList } from "./LocationList";
+export function LocationSelector({ open, onToggle, locations, onSelect, onShowMap }: { open: boolean; onToggle: () => void; locations: PizzaLocation[]; onSelect: (location: PizzaLocation) => void; onShowMap: () => void }) { return <div className="selector-wrap"><button className="explore-button" onClick={onToggle} aria-expanded={open} aria-controls="location-selector"><span className="compass">✦</span> Explore locations <span className="plus">{open ? "−" : "+"}</span></button><AnimatePresence>{open && <motion.aside id="location-selector" className="selector-panel" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 12 }}><div className="eyebrow">Find your nearest</div><h2>Locations</h2><LocationList locations={locations} onSelect={onSelect} /><button className="showcase-button" onClick={onShowMap}>View all on map <span>↗</span></button></motion.aside>}</AnimatePresence></div>; }

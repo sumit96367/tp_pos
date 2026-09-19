@@ -1,0 +1,23 @@
+"use client";
+import dynamic from "next/dynamic";
+import { AnimatePresence } from "framer-motion";
+import { useCallback, useState } from "react";
+import { locations } from "@/data/locations";
+import type { PizzaLocation } from "@/types/location";
+import type { MapHandle } from "@/components/map/CesiumMap";
+import { Header } from "@/components/layout/Header";
+import { LocationSelector } from "@/components/locations/LocationSelector";
+import { LocationCard } from "@/components/locations/LocationCard";
+import { MapControls } from "@/components/map/MapControls";
+import { LoadingScreen } from "@/components/ui/LoadingScreen";
+import { ErrorState } from "@/components/ui/ErrorState";
+const CesiumMap = dynamic(() => import("@/components/map/CesiumMap").then(m => m.CesiumMap), { ssr: false });
+const InteractiveMap = dynamic(() => import("@/components/ui/interactive-map").then(m => m.InteractiveMap), { ssr: false });
+export default function Home() { const [ready, setReady] = useState(false); const [failed, setFailed] = useState(false); const [panelOpen, setPanelOpen] = useState(false); const [showcaseOpen, setShowcaseOpen] = useState(false); const [selected, setSelected] = useState<PizzaLocation | null>(null); const [pending, setPending] = useState<PizzaLocation | null>(null); const [imageryLoading, setImageryLoading] = useState(false); const [map, setMap] = useState<MapHandle | null>(null);
+ const mapReady = useCallback((handle: MapHandle) => { setMap(handle); setReady(true); }, []);
+ const mapError = useCallback(() => setFailed(true), []);
+ const select = useCallback((location: PizzaLocation) => { setPanelOpen(false); setShowcaseOpen(false); setSelected(null); setPending(location); map?.flyToLocation(location); }, [map]);
+ const complete = useCallback((location: PizzaLocation) => { setPending(null); setSelected(location); }, []);
+ const reset = useCallback(() => { setSelected(null); setPending(null); map?.resetToUSOverview(); }, [map]);
+ if (failed) return <ErrorState locations={locations} onSelect={select} />;
+ return <main id="map" className="map-page"><CesiumMap locations={locations} selected={selected ?? pending} command={null} onReady={mapReady} onFlightComplete={complete} onError={mapError} onImageryLoadingChange={setImageryLoading} /><div className="map-vignette" /><Header onExplore={() => setPanelOpen(true)} /><section className="intro"><div className="eyebrow">United States</div><h1>Find your<br /><em>flavor.</em></h1><p>Explore Tandoori Pizza locations across the United States.</p></section><LocationSelector open={panelOpen} onToggle={() => setPanelOpen(v => !v)} locations={locations} onSelect={select} onShowMap={() => { setPanelOpen(false); setShowcaseOpen(true); }} /><MapControls onReset={reset} /><AnimatePresence>{showcaseOpen && <div className="showcase-overlay" role="dialog" aria-modal="true" aria-label="All Tandoori Pizza locations"><button className="showcase-close" onClick={() => setShowcaseOpen(false)} aria-label="Close all locations map">×</button><div className="showcase-copy"><span>Explore together</span><h2>All locations</h2><p>Choose a pin to begin a cinematic flight.</p></div><InteractiveMap locations={locations} onSelect={select} /></div>}{imageryLoading && <div className="imagery-loading" role="status">Loading high-resolution imagery<span>…</span></div>}{selected && <LocationCard location={selected} onAllLocations={reset} />}</AnimatePresence><AnimatePresence>{!ready && <LoadingScreen />}</AnimatePresence></main>; }

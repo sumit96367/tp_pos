@@ -1,0 +1,1 @@
+export function MapControls({ onReset }: { onReset: () => void }) { return <div className="map-controls"><button onClick={onReset} aria-label="Return to United States overview">⌖<span>US overview</span></button></div>; }
